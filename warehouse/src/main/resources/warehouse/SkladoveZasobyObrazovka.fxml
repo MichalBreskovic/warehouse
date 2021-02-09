@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="skladoveZasobyTableView" layoutX="22.0" layoutY="144.0" prefHeight="237.0" prefWidth="560.0">
+         <columns>
+            <TableColumn fx:id="nazovTableColumn" prefWidth="136.0" text="Druh tovaru" />
+            <TableColumn fx:id="mnozstvoTableColumn" minWidth="0.0" prefWidth="149.0" text="Množstvo" />
+            <TableColumn fx:id="mernaJednotkaTableColumn" prefWidth="122.0" text="Merná jednotka" />
+            <TableColumn fx:id="celkovaCenaTableColumn" prefWidth="152.0" text="Celková cena" />
+         </columns></TableView>
+      <Label alignment="TOP_LEFT" layoutX="22.0" layoutY="45.0" prefHeight="82.0" prefWidth="166.0" text="Názov skladu:&#10;Adresa:&#10;Počet položiek v sklade:&#10;Obsadenosť skladu:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="infoTextLabel" alignment="TOP_LEFT" layoutX="192.0" layoutY="44.0" prefHeight="82.0" prefWidth="166.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="skladComboBox" layoutX="118.0" layoutY="13.0" prefHeight="5.0" prefWidth="170.0" />
+      <Label layoutX="22.0" layoutY="17.0" prefHeight="17.0" prefWidth="72.0" text="Vyber sklad">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

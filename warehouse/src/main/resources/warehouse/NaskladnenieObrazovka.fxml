@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.6407035175879398" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="183.0" prefWidth="598.0">
+         <children>
+            <TableView fx:id="umiestneniaTableView" layoutX="17.0" layoutY="50.0" prefHeight="195.0" prefWidth="563.0">
+               <columns>
+                  <TableColumn fx:id="druhTovaruTableColumn" prefWidth="141.0" text="Druh tovaru" />
+                  <TableColumn fx:id="mnozstvoTableColumn" prefWidth="101.0" text="Množstvo" />
+                  <TableColumn fx:id="skladTableColumn" prefWidth="103.0" text="Sklad" />
+                  <TableColumn fx:id="regalTableColumn" prefWidth="108.0" text="Regál" />
+                  <TableColumn fx:id="policaTableColumn" prefWidth="109.0" text="Polica" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="skladComboBox" layoutX="137.0" layoutY="14.0" prefHeight="5.0" prefWidth="170.0" />
+            <Label layoutX="44.0" layoutY="18.0" prefHeight="17.0" prefWidth="72.0" text="Vyber sklad" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="209.0" prefWidth="598.0">
+         <children>
+            <Button fx:id="pridatButton" layoutX="274.0" layoutY="14.0" mnemonicParsing="false" text="+" />
+            <Button fx:id="odobratButton" layoutX="307.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="-" />
+            <ComboBox fx:id="druhTovaruComboBox" layoutX="140.0" layoutY="59.0" prefHeight="25.0" prefWidth="169.0" />
+            <Label layoutX="54.0" layoutY="63.0" prefHeight="17.0" prefWidth="72.0" text="Druh tovaru" />
+            <Label layoutX="367.0" layoutY="63.0" text="Množstvo" />
+            <TextField fx:id="mnozstvoTextField" layoutX="438.0" layoutY="59.0" prefHeight="25.0" prefWidth="59.0" />
+            <Button fx:id="naskladnitButton" layoutX="218.0" layoutY="105.0" mnemonicParsing="false" onAction="#naskladnitButtonClick" text="Naskladniť pripravený tovar" />
+            <Label fx:id="jednotkaLabel" layoutX="511.0" layoutY="63.0" text="jednotka" />
+            <Button fx:id="pridatTovarButton" layoutX="327.0" layoutY="59.0" mnemonicParsing="false" onAction="#pridatTovarButtonClick" text="+" />
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>

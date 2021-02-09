@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.09306569343065693, 0.4726277372262774, 0.5967153284671532" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+      <AnchorPane prefHeight="115.0" prefWidth="598.0">
+         <children>
+            <ComboBox fx:id="skladComboBox" layoutX="128.0" layoutY="11.0" prefHeight="5.0" prefWidth="170.0" />
+            <Label layoutX="14.0" layoutY="15.0" prefHeight="17.0" prefWidth="72.0" text="Vyber sklad" />
+         </children>
+      </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="116.0" prefWidth="598.0">
+         <children>
+            <TableView fx:id="skladoveZasobyTableView" layoutX="5.0" layoutY="35.0" prefHeight="158.0" prefWidth="586.0">
+              <columns>
+                  <TableColumn fx:id="idNaSklade" prefWidth="64.0" text="Id" />
+                  <TableColumn fx:id="druhTovaruNaSklade" prefWidth="149.0" text="Druh tovaru" />
+                  <TableColumn fx:id="mnozstvoNaSklade" prefWidth="136.0" text="Množstvo" />
+                  <TableColumn fx:id="regalNaSklade" prefWidth="128.0" text="Regál" />
+                  <TableColumn fx:id="policaNaSklade" prefWidth="107.0" text="Polica" />
+              </columns>
+            </TableView>
+            <Label layoutX="248.0" layoutY="8.0" text="Skladové zásoby" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="39.0" prefWidth="598.0">
+         <children>
+            <Button fx:id="pridatButton" layoutX="263.0" layoutY="21.0" mnemonicParsing="false" onAction="#pridatButtonClick" rotate="90.0" text="&gt;&gt;" />
+            <Button fx:id="odobratButton" layoutX="302.0" layoutY="21.0" mnemonicParsing="false" onAction="#odobratButtonClick" rotate="-90.0" text="&gt;&gt;" />
+            <Button fx:id="vyskladnitButton" layoutX="369.0" layoutY="21.0" mnemonicParsing="false" onAction="#vyskladnitButtonClick" text="Vyskladniť zvolený tovar" />
+         </children>
+      </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="197.0" prefWidth="598.0">
+         <children>
+            <TableView fx:id="naVyskladnenieTableView" layoutX="7.0" layoutY="38.0" prefHeight="169.0" prefWidth="586.0">
+              <columns>
+                  <TableColumn fx:id="idVyskladnit" prefWidth="64.0" text="Id" />
+                <TableColumn fx:id="druhTovaruVyskladnit" prefWidth="146.0" text="Druh tovaru" />
+                <TableColumn fx:id="mnozstvoVyskladnit" prefWidth="134.0" text="Množstvo" />
+                  <TableColumn fx:id="regalVyskladnit" prefWidth="131.0" text="Regál" />
+                  <TableColumn fx:id="policaVyskladnit" prefWidth="109.0" text="Polica" />
+              </columns>
+            </TableView>
+            <Label layoutX="243.0" layoutY="9.0" prefHeight="20.0" prefWidth="117.0" text="Na vyskladnenie" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
