@@ -41,12 +41,12 @@ public class SkladDaoController {
 
 	@PostMapping(value = "/sklad")
 	@ResponseStatus(HttpStatus.CREATED)
-	public void addJednotka(@RequestBody Sklad jednotka) {
-		skladDao.save(jednotka);
+	public void addSklad(@RequestBody Sklad sklad) {
+		skladDao.save(sklad);
 	}
 
 	@PutMapping("/sklad")
-	public ResponseEntity<Sklad> updateJednotka(@RequestBody Sklad sklad) {
+	public ResponseEntity<Sklad> updateSklad(@RequestBody Sklad sklad) {
 		try {
 			skladDao.save(sklad);
 			return new ResponseEntity<>(HttpStatus.ACCEPTED);
@@ -56,7 +56,7 @@ public class SkladDaoController {
 	}
 
 	@DeleteMapping("/sklad")
-	public ResponseEntity<Sklad> deleteJednotka(@RequestBody Sklad sklad) {
+	public ResponseEntity<Sklad> deleteSklad(@RequestBody Sklad sklad) {
 		try {
 			skladDao.delete(sklad.getId());
 			return new ResponseEntity<>(HttpStatus.ACCEPTED);
@@ -66,7 +66,7 @@ public class SkladDaoController {
 	}
 
 	@DeleteMapping("/sklad/{id}")
-	public ResponseEntity<Sklad> deleteJednotkaById(@PathVariable int id) {
+	public ResponseEntity<Sklad> deleteSkladById(@PathVariable int id) {
 		try {
 			skladDao.delete(id);
 			return new ResponseEntity<>(HttpStatus.ACCEPTED);
